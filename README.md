@@ -11,6 +11,9 @@
 </p>
 
 <p align="center">
+  <a href="README.md"><img src="https://img.shields.io/badge/Espa%C3%B1ol-facd28?style=flat-square" alt="Español"></a>
+  <a href="README.en.md"><img src="https://img.shields.io/badge/English-3987e5?style=flat-square" alt="English"></a>
+  <a href="README.zh-CN.md"><img src="https://img.shields.io/badge/%E4%B8%AD%E6%96%87-3987e5?style=flat-square" alt="中文"></a>
   <a href="https://github.com/Eliam4510/hakaru-ces/releases/latest"><img src="https://img.shields.io/github/v/release/Eliam4510/hakaru-ces?style=flat-square&label=versi%C3%B3n&color=facd28" alt="Versión"></a>
   <img src="https://img.shields.io/github/languages/top/Eliam4510/hakaru-ces?style=flat-square&color=3987e5" alt="Lenguaje principal">
   <img src="https://img.shields.io/github/languages/code-size/Eliam4510/hakaru-ces?style=flat-square&label=tama%C3%B1o&color=3987e5" alt="Tamaño del código">
@@ -26,8 +29,7 @@
   <a href="docs/MANUAL.md">Manual</a> ·
   <a href="docs/COMPILAR.md">Compilación</a> ·
   <a href="docs/DESIGN.md">Diseño</a> ·
-  <a href="docs/HOJA_DE_RUTA.md">Hoja de ruta</a> ·
-  <a href="#english-summary">English</a>
+  <a href="docs/HOJA_DE_RUTA.md">Hoja de ruta</a>
 </p>
 
 <p align="center">
@@ -243,17 +245,6 @@ flowchart LR
 | [Hoja de ruta](docs/HOJA_DE_RUTA.md) | Estado actual, trabajo pendiente y pruebas pendientes en la calculadora |
 | [Historial](docs/HISTORIAL.md) | Versiones, de ElectroFock a Hakaru CES 4.0 |
 
-## Historia
-
-El proyecto comenzó en septiembre de 2026 como una calculadora de circuitos
-de corriente continua, primero con el nombre provisional «Electroestatica» y
-después como **ElectroFock**, y se amplió por etapas: emulación en el
-tiempo, corriente alterna, semiconductores y amplificadores. Al cerrar la
-Etapa 4 adoptó el nombre **Hakaru CES**. Posteriormente se incorporaron la
-optimización para el procesador ARM, la función de capacitores equivalentes
-y esta publicación. La siguiente etapa (transformadores, sistemas trifásicos
-y emulación interactiva) se describe en la [hoja de ruta](docs/HOJA_DE_RUTA.md).
-
 ## Licencia y créditos
 
 Hakaru CES es obra de **Eliam Mojardin Ibarra** y se distribuye con licencia
@@ -264,38 +255,3 @@ la portada, la fuente Noto Sans JP (© Adobe), ambas con licencia SIL Open
 Font License 1.1. El programa se compila con el Ndless SDK. TI-Nspire es una
 marca de Texas Instruments; este proyecto no está afiliado a dicha empresa.
 Véase [AVISOS.md](AVISOS.md).
-
----
-
-## English summary
-
-<details>
-<summary><b>Hakaru CES in brief</b></summary>
-
-**Hakaru CES** (*hakaru*, 測る, means "to measure" in Japanese; CES stands for
-*Circuit Emulator & Solver*) is a native circuit emulator and solver for the
-**TI-Nspire CX II / CX II CAS** graphing calculators, running on
-[Ndless](https://ndless.me/). It works much like a compact NI Multisim on a
-320 × 240 screen:
-
-- grid-based circuit editor;
-- DC analysis with unknowns, including a step-by-step textbook procedure;
-- time-domain emulation (modified nodal analysis) with a two-channel
-  oscilloscope;
-- AC steady-state analysis: phasors, power, phasor diagrams,
-  Thévenin/Norton equivalents, a Bode plotter and an AC solver;
-- diodes, zener diodes, LEDs, controlled sources, op-amps, BJTs and MOSFETs,
-  with a Newton operating point, DC sweeps and device curves;
-- an equivalent-capacitor tool for replacing a capacitor with available
-  parts;
-- 13 lessons, 40 worked examples and 42 model circuits.
-
-The whole program also builds on a PC as a test harness (352 164 checks, no
-failures) and is cross-checked against independent reference simulators
-written in Python. The user interface and the documentation are in Spanish.
-To install, copy `hakaru_ces.tns` from the
-[latest release](https://github.com/Eliam4510/hakaru-ces/releases/latest) to
-a calculator with Ndless. To build, run `make` with the Ndless SDK.
-Licensed under the MIT License.
-
-</details>
