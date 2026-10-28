@@ -13,7 +13,8 @@
 <p align="center">
   <a href="https://github.com/Eliam4510/hakaru-ces/releases/latest"><img src="https://img.shields.io/github/v/release/Eliam4510/hakaru-ces?style=flat-square&label=versi%C3%B3n&color=facd28" alt="Versión"></a>
   <img src="https://img.shields.io/github/languages/top/Eliam4510/hakaru-ces?style=flat-square&color=3987e5" alt="Lenguaje principal">
-  <img src="https://img.shields.io/github/languages/code-size/Eliam4510/hakaru-ces?style=flat-square&label=c%C3%B3digo&color=3987e5" alt="Tamaño del código">
+  <a href="#código"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FEliam4510%2Fhakaru-ces%2Fmain%2F.github%2Finsignias%2Flineas.json&style=flat-square" alt="Líneas de código"></a>
+  <img src="https://img.shields.io/github/languages/code-size/Eliam4510/hakaru-ces?style=flat-square&label=tama%C3%B1o&color=3987e5" alt="Tamaño del código">
   <img src="https://img.shields.io/github/last-commit/Eliam4510/hakaru-ces?style=flat-square&label=%C3%BAltimo%20cambio&color=3987e5" alt="Último cambio">
 </p>
 
@@ -131,8 +132,7 @@ cálculo, exporta cada pantalla a imagen y somete la interfaz a millones de
 pulsaciones aleatorias. El emulador, el análisis de CA y el punto de
 operación se contrastan además con simuladores de referencia escritos de
 forma independiente en Python (numpy, SciPy, mpmath): 98 de 98, 174 de 174
-y 260 de 260 redes aleatorias coinciden. La distribución del código por
-lenguajes se muestra en la sección *Languages* de este repositorio.
+y 260 de 260 redes aleatorias coinciden.
 
 La calculadora no dispone de unidad de coma flotante. El programa se
 optimizó a partir de un perfil fiel del procesador ARM, con rutinas propias
@@ -168,6 +168,36 @@ ciclos calibrado con el banco de tiempos del equipo real). Detalles en
 [DESIGN.md §23](docs/DESIGN.md#23-la-optimización-rev9).
 
 </details>
+
+## Código
+
+<!-- ESTADISTICAS:INICIO -->
+
+```mermaid
+%%{init: {"themeVariables": {"pie1": "#2a78d6", "pie2": "#eb6834", "pie3": "#1baf7a", "pie4": "#eda100", "pie5": "#e87ba4", "pie6": "#008300", "pie7": "#6250d6", "pie8": "#e34948", "pieStrokeWidth": "2px", "pieOuterStrokeWidth": "0px", "pieSectionTextSize": "13px"}}}%%
+pie showData
+    title Líneas de código por área (75 431)
+    "Pruebas (arnés)" : 32781
+    "Interfaz y pantallas" : 15544
+    "Emulador y Newton" : 6419
+    "CC y procedimiento" : 4941
+    "Oráculos y herramientas" : 4657
+    "Lecciones y capacitores" : 3948
+    "Plataforma y archivos" : 3675
+    "Corriente alterna" : 3466
+```
+
+| Lenguaje | Archivos | Código | Comentarios | En blanco | Total |
+|---|---:|---:|---:|---:|---:|
+| C | 131 | 70 579 | 10 991 | 4 931 | 86 501 |
+| Python | 12 | 4 657 | 901 | 600 | 6 158 |
+| Shell | 7 | 149 | 74 | 7 | 230 |
+| Makefile | 1 | 46 | 34 | 15 | 95 |
+| **Total** | **151** | **75 431** | **12 000** | **5 553** | **92 984** |
+
+Se cuentan los archivos del repositorio escritos a mano; los generados por las herramientas (3 archivos, 13 961 líneas: la fuente en mapa de bits, el kanji y las tablas de soluciones exactas) quedan aparte, como en la barra de lenguajes de GitHub. El recuento se actualiza en cada cambio con el workflow [Estadísticas del código](.github/workflows/estadisticas.yml) ([`herramientas/estadisticas_codigo.py`](herramientas/estadisticas_codigo.py)).
+
+<!-- ESTADISTICAS:FIN -->
 
 ## Instalación
 
