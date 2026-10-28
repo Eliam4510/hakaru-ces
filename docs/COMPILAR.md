@@ -172,8 +172,6 @@ python3 herramientas/oraculo_nl.py        # no lineal: 260 de 260 (200 de CC y 6
 | `herramientas/gen_kanji.py` | `kanji_img.c`, el kanji 測る de la portada, con Noto Sans JP, ya mezclado con el fondo (si cambia `C_FONDO`, se regenera) |
 | `herramientas/banco_flanco.py` | las tablas de `test_flanco.inc`: los casos del banco del arranque tras un flanco y su solución exacta (mpmath, 40 cifras) |
 | `herramientas/gen_imagenes_readme.py` | las capturas de `docs/img`, el banner y el GIF de demostración del README, desde las BMP que deja `sh build_host.sh` en `out/` |
-| `herramientas/gen_graficas.py` | la gráfica de la optimización del README, en versión clara y oscura (matplotlib) |
-| `herramientas/estadisticas_codigo.py` | la sección «Código» del README (pastel de Mermaid y tabla de líneas por lenguaje) y la insignia de líneas de código; lo corre en cada cambio el workflow `.github/workflows/estadisticas.yml` |
 
 ## 6. Pruebas en la calculadora real
 
