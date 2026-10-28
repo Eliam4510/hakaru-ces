@@ -44,7 +44,7 @@ def fuente():
 
 # DESIGN.md §23.3: el perfil del ARM frente a la candidata de antes
 OPTIMIZACION = [
-    ('Bode, pantalla quieta', 89),
+    ('Bode, pantalla en reposo', 89),
     ('Osciloscopio (dibujo)', 79),
     ('Ejemplo de CC resuelto', 67),
     ('Punto de CA', 60),
@@ -107,8 +107,8 @@ def main():
     os.makedirs(SALIDA, exist_ok=True)
     for tema in TEMAS:
         barras(OPTIMIZACION,
-               'La optimización: cuánto trabajo menos hace la calculadora',
-               'Reducción medida en un perfil fiel del ARM (fase 1). Los resultados no cambian ni un bit.',
+               'Optimización: reducción del trabajo en la calculadora',
+               'Medida sobre un perfil fiel del ARM (fase 1), con resultados idénticos bit a bit.',
                lambda v: f'\u2212{v}\u202f%', 100,
                os.path.join(SALIDA, f'grafica_optimizacion_{tema}.svg'), tema, familia)
 

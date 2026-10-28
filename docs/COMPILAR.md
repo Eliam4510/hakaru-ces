@@ -45,7 +45,7 @@ make clean               # borra los .o, el .elf y el .tns
 ```
 
 El resultado, `hakaru_ces.tns` (898 480 bytes), se copia a la calculadora (ver
-el [README](../README.md#-instalar-en-la-calculadora)).
+el [README](../README.md#instalación)).
 
 **Cómo se compila.** `nspire-gcc` con `-Os -marm`, y el texto en UTF-8
 convertido a Latin-1 al compilar (`-finput-charset=UTF-8
@@ -65,7 +65,7 @@ cambio de banderas.
 
 | Bandera | Por omisión | Qué hace |
 |---|---|---|
-| `TURBO=1` | 0 | Compila la fila «Turbo» del panel Controles: subir el reloj de la CPU por encima de 396 MHz. **Experimental y fuera de la versión**: escribe un registro de la PMU sin el protocolo que usa el propio sistema operativo para cambiar de reloj. Bajo tu riesgo. Ver [DESIGN.md](DESIGN.md#23-la-optimización-rev9). |
+| `TURBO=1` | 0 | Compila la fila «Turbo» del panel Controles: subir el reloj de la CPU por encima de 396 MHz. **Experimental y fuera de la versión**: escribe un registro de la PMU sin el protocolo que usa el propio sistema operativo para cambiar de reloj. Bajo la responsabilidad de quien lo use. Ver [DESIGN.md](DESIGN.md#23-la-optimización-rev9). |
 | `DEBUG=TRUE` | `FALSE` | `-O0 -g` en lugar de `-Os` |
 | `ESPECIAL=1` | 0 | La versión especial del autor, que añade extras privados desde la carpeta `especial/`. Esa carpeta no se publica: sin ella, esta bandera no compila. |
 

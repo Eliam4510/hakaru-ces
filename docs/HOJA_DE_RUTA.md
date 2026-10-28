@@ -30,16 +30,16 @@ Dos modos sobre el mismo dibujo del Taller:
 
 | Modo | Qué hace | Cuándo se usa |
 |---|---|---|
-| **Emulador** | Como Multisim: todos los valores son conocidos y la app simula lo que pasa: punto de operación, evolución en el tiempo, régimen de CA, barridos. Resultados en tablas e instrumentos virtuales (osciloscopio, multímetro, trazador de Bode, vatímetro). | Cuando tienes el circuito completo y quieres ver qué hace. |
-| **Calculadora** | Lo que ya existe: marcas datos (lecturas de V o I) e incógnitas (R, E, J, r...) y la app despeja. Es lo que Multisim no hace. | Problemas de libro: "¿qué R hace que pasen 2 mA?". |
+| **Emulador** | Como Multisim: todos los valores son conocidos y la app simula lo que pasa: punto de operación, evolución en el tiempo, régimen de CA, barridos. Resultados en tablas e instrumentos virtuales (osciloscopio, multímetro, trazador de Bode, vatímetro). | Cuando el circuito está completo y se quiere observar su comportamiento. |
+| **Calculadora** | Lo que ya existe: se marcan datos (lecturas de V o I) e incógnitas (R, E, J, r...) y la app despeja. Es lo que Multisim no hace. | Problemas de libro: "¿qué R hace que pasen 2 mA?". |
 
 `=` sirve para los dos: si hay algo marcado con `?!`, calcula; si no, emula.
 
 **Qué pasa con el paso a paso.** Se queda como está para la CC, pero los
 componentes nuevos ya no llevan reglas de pizarra. A cambio, cada componente
 tiene una página **Modelo** con la ecuación exacta que usa el emulador (por
-ejemplo, `i = C·dv/dt` o `I = Is·(e^(V/nVt) − 1)`). Así puedes comparar el
-resultado con lo que dice tu libro.
+ejemplo, `i = C·dv/dt` o `I = Is·(e^(V/nVt) − 1)`). Así el resultado puede
+compararse con el del libro de texto.
 
 **Qué pasa con Aprende.** Se convierte poco a poco en una **biblioteca de
 circuitos modelo**, como los ejemplos de Multisim: RC, RLC, filtros,

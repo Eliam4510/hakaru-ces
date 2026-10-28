@@ -19,9 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----------------------------------------------------------------------------
-
-Las fuentes tipográficas convertidas que lleva el programa (font6x12.c, a
-partir de Terminus, y kanji_img.c, a partir de Noto Sans JP) siguen bajo su
-propia licencia, la SIL Open Font License 1.1: ver AVISOS.md.

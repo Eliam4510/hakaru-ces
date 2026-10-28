@@ -43,20 +43,20 @@ CAPTURAS = {
 
 RECORRIDO = [
     ('000_portada', 'Hakaru CES: emulador y calculadora de circuitos'),
-    ('001_menu', 'Tres partes: Taller, Aprende y Ayuda'),
-    ('011_editor_problema_propio', 'Dibuja el circuito con tecla + flecha'),
-    ('016_propio_resultado', '[=] lo resuelve en continua...'),
-    ('591_j_paso01', '...y explica el procedimiento, paso a paso'),
-    ('623_emu_osc', 'Lo emula en el tiempo: osciloscopio de dos canales'),
-    ('647_ca_resultado', 'Corriente alterna: fasores, potencias y Thévenin'),
+    ('001_menu', 'Menú principal: Taller, Aprende y Ayuda'),
+    ('011_editor_problema_propio', 'Edición del circuito sobre la rejilla'),
+    ('016_propio_resultado', 'Resolución en corriente continua'),
+    ('591_j_paso01', 'Procedimiento paso a paso'),
+    ('623_emu_osc', 'Emulación en el tiempo: osciloscopio de dos canales'),
+    ('647_ca_resultado', 'Corriente alterna: fasores y potencias'),
     ('fasorial_potencias', 'Diagrama fasorial y triángulo de potencias'),
-    ('bode_tanque_cursores', 'Trazador de Bode, con cursores y medidas'),
-    ('e4_esq_todos', 'Diodos, zener, LED, AO, BJT, MOSFET y controladas'),
-    ('e4_res_led', 'Punto de operación por Newton'),
-    ('curva_led_20mA', 'Barrido de CC: ¿qué R da 20 mA?'),
-    ('e4_bjt_familia', 'Las curvas de cada transistor'),
-    ('cm_res_17', 'Capacitores equivalentes: todas las opciones...'),
-    ('cm_dib_mixto', '...y el dibujo del cableado'),
+    ('bode_tanque_cursores', 'Trazador de Bode con cursores y medidas'),
+    ('e4_esq_todos', 'Diodos, LED, amplificador operacional y transistores'),
+    ('e4_res_led', 'Punto de operación por el método de Newton'),
+    ('curva_led_20mA', 'Barrido de CC con lectura en el cursor'),
+    ('e4_bjt_familia', 'Curvas características del BJT'),
+    ('cm_res_17', 'Capacitores equivalentes: opciones ordenadas'),
+    ('cm_dib_mixto', 'Diagrama de conexión de la opción elegida'),
 ]
 
 
@@ -127,7 +127,7 @@ def banner():
     im.paste(mini, (x0 + 40, 262))
     d = ImageDraw.Draw(im)
     f = fuente(24)
-    d.text((x0, 470), 'Para la TI-Nspire CX II  ·  sobre Ndless  ·  hecho en C', font=f, fill=TENUE)
+    d.text((x0, 470), 'TI-Nspire CX II  ·  Ndless  ·  C99', font=f, fill=TENUE)
     osc = con_marco(x2(bmp('623_emu_osc')))
     rgba = im.convert('RGBA')
     rgba.alpha_composite(osc, (W - osc.width + 6, (H - osc.height) // 2 + 4))

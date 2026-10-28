@@ -18,7 +18,7 @@ ESPECIAL ?= 0
 # hoy respalda escribir solo 0x90140030 (la revisión final, 2026-09-29).
 # Sin él, main.c no le da el hardware: turbo_hay() = 0, sin la fila de
 # Controles y sin tocar ningún registro. Para probarlo en la calculadora,
-# bajo tu riesgo:  make clean && make TURBO=1
+# bajo la responsabilidad de quien lo use:  make clean && make TURBO=1
 TURBO ?= 0
 
 GCC = nspire-gcc

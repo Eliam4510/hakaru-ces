@@ -31,7 +31,7 @@ flecha.
 
 | Parte | Qué hace |
 |---|---|
-| **Taller** | Dibujas tu propio circuito y el programa lo calcula, lo emula o lo analiza. Tiene cuatro opciones: «Problema nuevo», «Seguir con el problema actual», «Mis problemas guardados» y **«Capacitores equivalentes»**. |
+| **Taller** | Editor de circuitos: el programa calcula, emula o analiza el circuito dibujado. Tiene cuatro opciones: «Problema nuevo», «Seguir con el problema actual», «Mis problemas guardados» y **«Capacitores equivalentes»**. |
 | **Aprende** | 13 lecciones. Las 9 primeras, de corriente continua, con teoría y 40 ejemplos resueltos (ley de Ohm, serie, paralelo, mixtos, despejar, potencia, Kirchhoff, fuentes reales, fuentes de corriente e instrumentos, y nueve problemas de pizarrón). Las otras 4 traen 42 circuitos modelo para emular: **Circuitos en el tiempo** (12), **Corriente alterna** (10: filtros, resonancia, fasores, vatímetro, corrección del factor de potencia, Thévenin), **Diodos** (10) y **AO y transistores** (10). |
 | **Ayuda** | Este manual, resumido, en la calculadora. |
 
@@ -85,7 +85,7 @@ traído se ve entero en las dos líneas de abajo.
 
 Al volver con `[esc]` de un error (un `[=]` que no puede calcular, emular o
 analizar), el cursor queda en el elemento culpable y `[enter]` abre su ficha
-en la fila que falla. La línea de abajo dice, mientras dibujas, qué pides y si
+en la fila que falla. La línea inferior indica, durante la edición, qué se pide y si
 los datos alcanzan (la regla de la continua: **tantos datos de V o I como
 valores desconocidos**, entre R, E, J y r).
 
@@ -94,7 +94,7 @@ valores desconocidos**, entre R, E, J y r).
 Al poner un elemento se abre su ficha. En cada campo:
 
 - un **número** es un **dato**;
-- `[?!]` es **lo que buscas**;
+- `[?!]` marca una **incógnita**;
 - `[del]` es **no se sabe** (el campo queda vacío).
 
 En la fuente de tensión: E, la I que entrega, su **r interna** (vacía =
@@ -119,7 +119,7 @@ menos de 1 µΩ no se acepta: la ficha dice por qué y se queda en ese campo.
 **Teclas de la ficha.** En un circuito de continua, `[tab]` confirma el campo
 y pasa a la ficha del siguiente elemento (en alterna, `[tab]` es la caja del
 ángulo). `[menu]` confirma y abre las opciones del editor; `[ctrl]` `[Z]`
-deshace (si pusiste una pieza encima de otra, vuelve la de antes: la ficha
+deshace (si se colocó una pieza encima de otra, vuelve la anterior: la ficha
 avisa «Sustituye a R1 …»), `[ctrl]` `[Y]` rehace y `[ctrl]` `[S]` confirma y
 guarda; `[ctrl]` con `[C]`, `[X]`, `[V]` o `[N]` confirma y vuelve al editor
 para copiar, cortar, pegar o poner nombre. `[catálogo]` en la ficha de un
@@ -192,7 +192,7 @@ emula, una barra dice cuánto falta y `[esc]` lo corta.
 | `[+]` `[-]` | tiempo por división |
 | `[arr]` `[ab]` | voltios por división del canal activo |
 | `[C]` | cambia de canal |
-| `[X]` | cursores T1 y T2 (escribe un tiempo: `1` `[M]` es 1 ms) |
+| `[X]` | cursores T1 y T2 (admite un tiempo escrito: `1` `[M]` es 1 ms) |
 | `[M]` | medidas o cursores (con cursores, las medidas son entre T1 y T2) |
 | `[U]` | el último periodo (T1 y T2 en sus bordes: el régimen permanente, con su frecuencia) |
 | `[P]` | el siguiente pico |
@@ -248,7 +248,7 @@ separan…
 ![Calculadora de CA](img/ca_calculadora.png)
 
 **El trazador de Bode** (`[B]`, o `[menu]` > Bode) barre la frecuencia con
-autorrango: |H| en dB y la fase, con cursores exactos (escribe una f: `1`
+autorrango: |H| en dB y la fase, con cursores exactos (admite una f escrita: `1`
 `[K]` `[enter]`), las marcas (−3 dB, f0, pico, valle) y el tipo de filtro con
 su fc, f0, BW y Q. `[tab]` abre los fasores a la f del cursor. Mientras el
 cursor corre, la lectura sale de la malla con «≈»; al soltar, la exacta.
@@ -319,7 +319,7 @@ en serie, en paralelo o mixtos. Tiene su propio menú: **Resolver**,
   **repetidos cuentan**: `7 7` son dos de 7 MF (y entonces 7 ∥ 7 vale; con un
   solo 7, no). `15-42` es un rango (15, 16, …, 42) y `sin 21-24` quita
   valores; `[A]` y `[B]` cargan dos bodegas de ejemplo.
-- **Capacitores**: Auto (busca con 1, 2 y 3) o solo 2 o solo 3 (si te piden
+- **Capacitores**: Auto (busca con 1, 2 y 3) o solo 2 o solo 3 (si se pide
   un número fijo).
 
 En los campos, `[izq/der]` mueven el cursor, `[shift]` salta de valor y
@@ -351,7 +351,7 @@ Las fórmulas que usa:
 ![Dibujo de un mixto](img/capacitores_dibujo.png)
 
 Si no hay ninguna combinación que valga, lo dice, da **la más cercana** y
-**qué capacitor te faltaría** para lograrlo. Por ejemplo, 17 MF con la bodega
+**qué capacitor faltaría** para lograrlo. Por ejemplo, 17 MF con la bodega
 A da 10 ∥ 7 = 17 MF ✓.
 
 ## 9. Aprende y el modo práctica
@@ -365,12 +365,12 @@ lo analiza, lo calcula o lo barre, según el modelo) y `[tab]` lo lleva al
 Taller.
 
 **Practicar.** Para estudiar, no solo para comprobar. En el editor, `[?!]` (o
-`[menu]` > Practicar) resuelve con las respuestas **tapadas**: escribes tu
-número, `[enter]`, y te dice si está bien (al 1 %) o qué pusiste y cuánto era.
+`[menu]` > Practicar) resuelve con las respuestas **ocultas**: se escribe el
+valor, `[enter]`, y el programa indica si es correcto (al 1 %) o cuál era el valor esperado.
 `[enter]` sin número abre el paso a paso, donde cada paso se destapa con
 `[enter]`; `[tab]` lo destapa todo. En Aprende, `[?!]` en la lista de
 ejemplos tapa las explicaciones y cada ejemplo se abre para practicar. Si los
-datos admiten varias soluciones, vale cualquiera, pero todas tus respuestas
+datos admiten varias soluciones, vale cualquiera, pero todas las respuestas
 tienen que salir de la misma.
 
 ## 10. Guardar: Mis problemas y la sesión
@@ -386,7 +386,7 @@ tienen que salir de la misma.
   de antes). Al volver, Taller > «Seguir con el problema actual» lo recupera,
   con su hueco si su archivo sigue siendo el mismo.
 - Los títulos de los ejemplos y los modelos (hasta 39 caracteres) se ven y se
-  guardan enteros; el nombre que escribes llega a 23.
+  guardan enteros; el nombre escrito por el usuario admite hasta 23.
 
 Los archivos van en la misma carpeta que `hakaru_ces.tns`. Con TI Connect se
 pueden copiar al PC como respaldo.
@@ -415,7 +415,7 @@ mantenida tiende el cable entero y un solo `[ctrl]` `[Z]` lo quita.
 - **`[ctrl]` `[menu]`**, desde cualquier pantalla (a la vez, o `[ctrl]` y
   luego `[menu]`; emulando, no): el panel **Controles**: deslizar sí o no;
   repetición no, lenta, normal o rápida; clic central `[enter]` o nada. Se
-  guarda en `ces_controles.tns`. Si el dedo da pasos que no querías,
+  guarda en `ces_controles.tns`. Si el touchpad produce pasos involuntarios,
   «Deslizar: no» los quita de raíz. Abajo dice qué touchpad tiene la
   calculadora (Synaptics o CapTIvate, y su tamaño) y cómo va el reloj de la
   capa de entrada. Ahí, `[G]` (oculto) graba 10 s de muestras crudas del
@@ -448,5 +448,5 @@ paso del emulador y para estimar cuánto falta:
 
 Se calibraron con el banco del 2026-09-27 corrido **sin el cable USB** y tras
 reiniciar: con el USB conectado, la CX II baja su reloj a 288 MHz y todo sale
-unas 1,37 veces más lento. Para medir bien, desconecta el cable, apaga y
-enciende la calculadora (y reactiva Ndless) antes de correr el banco.
+unas 1,37 veces más lento. Para una medida correcta, se debe desconectar el
+cable, apagar y encender la calculadora y reactivar Ndless antes de correr el banco.
