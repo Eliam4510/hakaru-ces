@@ -1,0 +1,28 @@
+# Intermedios de compilación
+*.o
+*.elf
+*.zehn
+
+# El programa compilado: se publica en las «Releases», no en el código
+*.tns
+
+# Salida de las pruebas en el PC (BMP, binarios del arnés, redes de los oráculos)
+out/
+
+# Python
+__pycache__/
+*.pyc
+
+# La versión especial: privada, solo en el equipo del autor
+especial/
+
+# Restos de parches y editores
+*.orig
+*.rej
+*.swp
+*~
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

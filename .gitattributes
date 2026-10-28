@@ -1,0 +1,22 @@
+# El proyecto se compila en Linux o WSL. Si Git convirtiera los saltos de
+# línea a CRLF al sacar el código, los .sh dejarían de ejecutarse en bash
+# ("bad interpreter"). Se fuerza LF en todo el texto.
+* text=auto eol=lf
+
+# Binarios: nunca se tocan.
+*.tns binary
+*.bmp binary
+*.png binary
+*.gif binary
+
+# La barra de lenguajes de GitHub (Linguist):
+# - los .inc son trozos de C del arnés (host_test.c los incluye), no PHP ni Pawn;
+*.inc linguist-language=C
+# - lo generado por los scripts de herramientas/ no cuenta como código escrito:
+#   la fuente Terminus en mapa de bits, el kanji de la portada y las tablas
+#   de las soluciones exactas del banco del flanco;
+font6x12.c linguist-generated=true
+kanji_img.c linguist-generated=true
+test_flanco.inc linguist-generated=true
+# - las redes de ejemplo de los oráculos son datos.
+herramientas/c204/* linguist-vendored=true
